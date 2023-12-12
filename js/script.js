@@ -38,7 +38,7 @@ createApp({
     },
     methods:{
         nextImg(){
-            if(this.activeImage == this.series.images.lenght){
+            if(this.activeImage == this.slides.img.lenght - 1){
                 this.activeImage = 0;
             }
             else{
@@ -47,7 +47,7 @@ createApp({
         },
         prevImg(){
             if(this.activeImage == 0){
-                this.activeImage = this.series.images.lenght;
+                this.activeImage = this.slides.img.lenght - 1;
             }
             else{
                 this.activeImage--;
