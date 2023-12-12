@@ -4,6 +4,7 @@ const { createApp } = Vue;
 createApp({
     data(){
         return {
+            autolpay: null,
             activeImage: 0,
             slides: {
                 img: [
@@ -53,6 +54,11 @@ createApp({
                 this.activeImage--;
             }
         },
+        // Bonus 1
+        changeThumb(index){
+            this.activeImage = index;
+        },
+        
     }
 }).mount('#app')
 

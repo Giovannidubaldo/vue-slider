@@ -33,6 +33,7 @@
                         v-for="(thumb, index) in slides.img"
                         :src="`${thumb.image}`" 
                         :class="activeImage === index ? 'thumb active' : '' "
+                        @click="changeThumb(index)"
                         />
                     </div>
                     
