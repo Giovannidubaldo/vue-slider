@@ -74,6 +74,26 @@
     bottom: 0;
 }
 
+.button{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    padding: 10px;
+    margin: 10px;
+    background-color: green;
+    color: white;
+    border-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:active{
+    background-color: grey;
+}
+
 /*
 EXTRA: in questo esempio gli accordion vengono creati
 usando 2 bordi di un quadratino ruotato di 45 gradi

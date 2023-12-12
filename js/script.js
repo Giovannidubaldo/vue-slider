@@ -4,7 +4,7 @@ const { createApp } = Vue;
 createApp({
     data(){
         return {
-            autolpay: null,
+            autoplay: null,
             activeImage: 0,
             slides: {
                 img: [
@@ -58,7 +58,20 @@ createApp({
         changeThumb(index){
             this.activeImage = index;
         },
-        
+        // Bonus 2
+        startAutoplay(){
+            this.autoplay = setInterval(() => {
+                this.nextImg()
+            }, 2000)
+        },
+        pauseAutoplay(){
+            clearInterval(this.autoplay)
+            this.autoplay = null;
+        },
+        stopAutoplay(){
+            this.pauseAutoplay();
+            this.activeImage = 0;
+        }
     }
 }).mount('#app')
 
