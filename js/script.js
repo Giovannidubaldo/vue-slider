@@ -6,8 +6,8 @@ createApp({
         return {
             autoplay: null,
             activeImage: 0,
-            slides: {
-                img: [
+            slides: [
+            
                     {
                         image: 'img/01.webp',
                         title: 'Marvel\'s Spiderman Miles Morale',
@@ -33,13 +33,13 @@ createApp({
                         title: "Marvel's Avengers",
                         text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
                     }
+                
                 ]
-            }
         }
     },
     methods:{
         nextImg(){
-            if(this.activeImage == this.slides.img.lenght - 1){
+            if(this.activeImage == this.slides.length - 1){
                 this.activeImage = 0;
             }
             else{
@@ -48,7 +48,7 @@ createApp({
         },
         prevImg(){
             if(this.activeImage == 0){
-                this.activeImage = this.slides.img.lenght - 1;
+                this.activeImage = this.slides.length - 1;
             }
             else{
                 this.activeImage--;
